@@ -36,7 +36,8 @@ lateinit var binding : FragmentMainScreenBinding
 
              }
         setFragmentResultListener(REQUEST_KEY){ requestKey, bundle ->
-            binding.textResult.text = getString(R.string.result_text,bundle.getString(RESULT),bundle.getString("operand1"),bundle.getString("operand2"),bundle.getString("operation"))
+            binding.textResult.text = getString(R.string.result_text,bundle.getString(RESULT),bundle.getString(
+                OPERAND1),bundle.getString(OPERAND2),bundle.getString(OPERATION))
             modifyScreenForResult()
         }
         return binding.root
